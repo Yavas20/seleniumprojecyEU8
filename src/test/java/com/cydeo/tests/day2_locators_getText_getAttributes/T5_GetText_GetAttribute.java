@@ -33,7 +33,7 @@ public class T5_GetText_GetAttribute {
             System.out.println("Failed !!!");
         }
 
-        driver.close();
+
 
     }
 }
