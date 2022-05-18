@@ -46,7 +46,7 @@ public class Task6_DateDropdown {
                 + dateDropdownYear.getFirstSelectedOption().getText();
 
         System.out.println(actualText);
-        Assert.assertEquals(expectedText, actualText);
+        Assert.assertEquals(actualText, expectedText);
 
 
 
