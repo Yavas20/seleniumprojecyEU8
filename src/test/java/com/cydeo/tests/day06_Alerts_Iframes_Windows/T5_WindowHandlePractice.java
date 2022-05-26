@@ -41,9 +41,15 @@ public class T5_WindowHandlePractice {
         WebElement clickButton = driver.findElement(By.linkText("Click Here"));
         clickButton.click();
 
+        // String a = driver.getWindowHandles().toArray(new String[0]) [1];
+
+        String [] a = driver.getWindowHandles().toArray(new String[0]);
+
         for ( String each : driver.getWindowHandles()){
             driver.switchTo().window(each);
         }
+
+
 
         String expectedTitleNewTab = "New Window";
         actualTitle = driver.getTitle();
