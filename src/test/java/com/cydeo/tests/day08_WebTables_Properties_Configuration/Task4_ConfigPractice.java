@@ -30,9 +30,10 @@ public class Task4_ConfigPractice {
     public void google_search_test(){
 
         WebElement googleSearchButton = driver.findElement(By.xpath("//input[@name='q']"));
-        googleSearchButton.sendKeys("apple" + Keys.ENTER);
 
-        String expectedTitle = "apple - Google Search";
+        googleSearchButton.sendKeys(ConfigurationReader.getProperty("searchValue")+ Keys.ENTER);
+
+        String expectedTitle = ConfigurationReader.getProperty("searchValue") +" - Google Search";
         String actualTitle = driver.getTitle();
 
         Assert.assertEquals(actualTitle, expectedTitle);
