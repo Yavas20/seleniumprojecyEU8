@@ -1,4 +1,4 @@
-package com.cydeo.tests.day07_WebTables_Utility_JavaFakers;
+package com.cydeo.tests.day07_WebTables_Utility;
 
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.JavascriptExecutor;
@@ -47,7 +47,10 @@ public class T1_WindowHandle {
             }
         }
 
+
+
         String actualTitle = driver.getTitle();
+        System.out.println(actualTitle);
         String expectedInTitle = "Etsy";
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
 

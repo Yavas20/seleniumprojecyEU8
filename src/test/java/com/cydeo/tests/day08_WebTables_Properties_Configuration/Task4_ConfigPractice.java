@@ -2,11 +2,7 @@ package com.cydeo.tests.day08_WebTables_Properties_Configuration;
 
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.WebDriverFactory;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -29,14 +25,16 @@ public class Task4_ConfigPractice {
     @Test
     public void google_search_test(){
 
-        WebElement googleSearchButton = driver.findElement(By.xpath("//input[@name='q']"));
+        System.out.println(ConfigurationReader.getProperty("browser"));
 
-        googleSearchButton.sendKeys(ConfigurationReader.getProperty("searchValue")+ Keys.ENTER);
-
-        String expectedTitle = ConfigurationReader.getProperty("searchValue") +" - Google Search";
-        String actualTitle = driver.getTitle();
-
-        Assert.assertEquals(actualTitle, expectedTitle);
+//        WebElement googleSearchButton = driver.findElement(By.xpath("//input[@name='q']"));
+//
+//        googleSearchButton.sendKeys(ConfigurationReader.getProperty("searchValue")+ Keys.ENTER);
+//
+//        String expectedTitle = ConfigurationReader.getProperty("searchValue") +" - Google Search";
+//        String actualTitle = driver.getTitle();
+//
+//        Assert.assertEquals(actualTitle, expectedTitle);
 
     }
 

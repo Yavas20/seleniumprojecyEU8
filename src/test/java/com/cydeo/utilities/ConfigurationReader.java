@@ -9,7 +9,7 @@ public class ConfigurationReader {
     //1- Create the object of Properties
     private static Properties properties = new Properties();
 
-    static {
+    static  {
 
         try {
 
