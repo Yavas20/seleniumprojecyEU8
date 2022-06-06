@@ -38,6 +38,28 @@ public class ReviewUtils {
         return price;
     }
 
+    // //td[.='Samsung galaxy s6']/following-sibling::td[1]
+    public static void getLink2(WebDriver driver, String product){
+        driver.findElement(By.xpath("//td[.='"+ product +"']/following-sibling::td[2]/a)")).click();
+        staticWait(1);
+    }
+
+     public static double productRemover (WebDriver driver, String product){
+
+         String priceText = driver.findElement((By.xpath("//td[.='"+ product +"']/following-sibling::td[1]"))).getText();
+         double price = Double.parseDouble(priceText);
+         getLink2(driver,product);
+         return price;
+
+    }
+
+    /*
+
+Extra Practice : create a productRemover method to utility,
+ and this method should return removed products price, so that we can deduct from the expected price
+
+     */
+
     public static void fillForm(WebDriver driver){
 
         Faker faker = new Faker();

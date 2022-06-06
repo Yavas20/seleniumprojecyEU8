@@ -57,7 +57,4 @@ public class TestCaseAdidas extends TestBase {
     }
 
 
-
-
-
 }
