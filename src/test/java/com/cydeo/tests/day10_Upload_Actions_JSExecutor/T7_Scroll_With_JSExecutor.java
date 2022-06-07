@@ -19,6 +19,9 @@ public class T7_Scroll_With_JSExecutor {
 
         WebElement homeLink = Driver.getDriver().findElement(By.xpath("//a[.='Home']"));
 
+        js.executeScript("arguments[0].scrollIntoView(true)", cydeoLink);
+        js.executeScript("arguments[1].scrollIntoView(true)", cydeoLink, homeLink);
+
 
 
     }
