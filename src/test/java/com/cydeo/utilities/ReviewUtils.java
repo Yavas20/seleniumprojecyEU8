@@ -39,16 +39,16 @@ public class ReviewUtils {
     }
 
     // //td[.='Samsung galaxy s6']/following-sibling::td[1]
-    public static void getLink2(WebDriver driver, String product){
+    public static void deleteLink(WebDriver driver, String product){
         driver.findElement(By.xpath("//td[.='"+ product +"']/following-sibling::td[2]/a)")).click();
-        staticWait(1);
+        staticWait(3);
     }
 
      public static double productRemover (WebDriver driver, String product){
 
          String priceText = driver.findElement((By.xpath("//td[.='"+ product +"']/following-sibling::td[1]"))).getText();
          double price = Double.parseDouble(priceText);
-         getLink2(driver,product);
+         deleteLink(driver,product);
          return price;
 
     }

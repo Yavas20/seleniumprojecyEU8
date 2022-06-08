@@ -26,9 +26,9 @@ public class aaa extends TestBase {
         // click on Place order : //button[.='Place Order']
         System.out.println("expectedPrice = " + expectedPrice);
 
-       expectedPrice -= ReviewUtils.productRemover(driver,"Samsung galaxy s6");
+       expectedPrice -= ReviewUtils.productRemover(driver,"Sony vaio i5");
         System.out.println(expectedPrice);
-        ReviewUtils.getLink2(driver,"Samsung galaxy s6" );
+        ReviewUtils.deleteLink(driver,"Sony vaio i5" );
 
 
     }
