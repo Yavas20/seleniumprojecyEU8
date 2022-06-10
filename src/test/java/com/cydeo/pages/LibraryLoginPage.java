@@ -18,6 +18,7 @@ public class LibraryLoginPage {
 
     //#2- use @FindBy annotation to locate web elements
 
+    
     @FindBy(xpath = "//input[@id='inputEmail']")
     public WebElement inputUsername;
 

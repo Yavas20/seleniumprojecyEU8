@@ -14,7 +14,8 @@ public class WebDriveWaitPractices {
     @Test
     public void dynamic_load_7_test(){
 
-        Driver.getDriver().get("https://practice.cydeo.com/dynamic_loading/7");
+       Driver.getDriver().get("https://practice.cydeo.com/dynamic_loading/7");
+
 
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
 
