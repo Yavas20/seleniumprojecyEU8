@@ -4,6 +4,10 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ReviewUtils {
 
@@ -72,6 +76,17 @@ Extra Practice : create a productRemover method to utility,
         driver.findElement(By.xpath("//button[.='Purchase']")).click();
         staticWait(2);
     }
+
+
+    // get List of Webelement as parameter and return List of String
+    public static List<String> getElementsTexts(List<WebElement> inputList){
+        List<String> list = new ArrayList<>();
+        for (WebElement webElement : inputList) {
+            list.add(webElement.getText());
+        }
+        return list;
+    }
+
 
 
 
